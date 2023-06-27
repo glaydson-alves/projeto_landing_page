@@ -1,0 +1,11 @@
+.bloco{
+    background-color: coral;
+    border: 1px solid black;
+    
+}
+body{
+    display: grid;
+    grid-template-columns: 30% 50% 20%; /*cria coluna no site*/
+    height:100vh; /*vh = viewport > é toda a area da tela*/
+
+}
