@@ -1,0 +1,54 @@
+/*RESET*/
+*{
+    margin: 0;
+    padding: o;
+    box-sizing: border-box;
+    outline: none; /*quando clicar em uma caixa ele fica azul*/
+    
+}
+body{
+    background-color:red;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-areas: 'cabecalho formulario'
+                         'principal formulario'
+                         'rodape formulario';
+    height: 100vh;
+}
+/* HEADER */
+header{
+    grid-area: cabecalho;
+    background-color: chocolate; 
+}
+.logo h1{
+    color: #274083;
+    margin-left: 10px;/* espaçamento entre os itens*/
+}
+.logo img{
+    width: 80px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    border: 1px #fff solid;
+    padding: 10px 30px;
+
+}
+
+/* MAIN */
+main{
+    background-color: blueviolet;
+    grid-area: principal;
+}
+/* ASIDE */
+aside{
+    background-color: cyan;
+    grid-area: formulario;
+}
+/* FOOTER */
+footer{
+    background-color: darkgreen;
+    grid-area: rodape;
+}
