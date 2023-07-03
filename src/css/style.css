@@ -7,7 +7,6 @@
     
 }
 body{
-    background-color:red;
     font-family: Arial, Helvetica, sans-serif;
     color: #fff;
     display: grid;
@@ -16,11 +15,12 @@ body{
                          'principal formulario'
                          'rodape formulario';
     height: 100vh;
+
 }
 /* HEADER */
 header{
     grid-area: cabecalho;
-    background-color: chocolate; 
+    background-color: ; 
 }
 .logo h1{
     color: #274083;
@@ -32,23 +32,41 @@ header{
 .logo{
     display: flex;
     align-items: center;
-    border: 1px #fff solid;
     padding: 10px 30px;
-
 }
 
 /* MAIN */
 main{
-    background-color: blueviolet;
+    background: linear-gradient(to right, #48a0df, #274083);
     grid-area: principal;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    line-height: 1cm;
+}
+main figure{
+    width: 200px;
+}
+main figure img{
+    width: 100%;
+}
+main h1{
+    font-size: 40px;
+    width: 80%;
+    margin-bottom: 30px;
+}
+main h3{
+    width: 80%;
 }
 /* ASIDE */
 aside{
-    background-color: cyan;
+    background-color:#274083;
     grid-area: formulario;
 }
 /* FOOTER */
 footer{
-    background-color: darkgreen;
+    background-color: ;
     grid-area: rodape;
 }
