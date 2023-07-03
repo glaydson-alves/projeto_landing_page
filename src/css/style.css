@@ -4,8 +4,12 @@
     padding: o;
     box-sizing: border-box;
     outline: none; /*quando clicar em uma caixa ele fica azul*/
-    
 }
+    /* VARIAVÉIS */
+:root{
+    --corAzul:#274083;
+}
+
 body{
     font-family: Arial, Helvetica, sans-serif;
     color: #fff;
@@ -20,10 +24,10 @@ body{
 /* HEADER */
 header{
     grid-area: cabecalho;
-    background-color: ; 
+
 }
 .logo h1{
-    color: #274083;
+    color: var(--corAzul);
     margin-left: 10px;/* espaçamento entre os itens*/
 }
 .logo img{
@@ -37,7 +41,7 @@ header{
 
 /* MAIN */
 main{
-    background: linear-gradient(to right, #48a0df, #274083);
+    background: linear-gradient(to right, #48a0df, var(--corAzul));
     grid-area: principal;
     display: flex;
     align-items: center;
@@ -62,11 +66,24 @@ main h3{
 }
 /* ASIDE */
 aside{
-    background-color:#274083;
+    background-color:var(--corAzul);
     grid-area: formulario;
 }
 /* FOOTER */
 footer{
-    background-color: ;
     grid-area: rodape;
+    display: flex;
+    background-color:#ccc;
+    color: var(--corAzul);
+    padding: 30px;
+}
+footer section{
+    margin: 5px 20px;
+}
+footer .rodape-titulo{
+    margin-bottom: 20px;
+}
+footer .rodape-conteudo{
+    text-align: justify;
+    line-height: 0.7cm;
 }
