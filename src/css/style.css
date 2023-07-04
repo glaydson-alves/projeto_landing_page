@@ -69,6 +69,53 @@ aside{
     background-color:var(--corAzul);
     grid-area: formulario;
 }
+aside h1{
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+aside form{
+    width: 90%;
+    margin: 0 auto; /*centralizou*/
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+aside input,
+aside select,
+aside button{
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+}
+
+::placeholder{
+    color: #000;
+}
+aside input:focus,
+aside select:focus{
+    outline: 2px solid #48a0df;
+    /* box-shadow: 0 0 5px #48a0df; */
+}
+/* aside:where(input, select):focus{
+    outline: 2px solid #48a0df;
+} */
+aside button{
+    background-color: #11dd2c;
+    cursor: pointer;
+    transition: all o.2s linear;
+}
+aside button:hover{
+    box-shadow: 0 0 10px #03123f;
+    transition: all o.2s linear;
+}
+aside small{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    display: block;
+    text-align: center;
+}
 /* FOOTER */
 footer{
     grid-area: rodape;
