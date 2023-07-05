@@ -1,46 +1,53 @@
 /*RESET*/
-*{
+* {
     margin: 0;
     padding: o;
     box-sizing: border-box;
-    outline: none; /*quando clicar em uma caixa ele fica azul*/
-}
-    /* VARIAVÉIS */
-:root{
-    --corAzul:#274083;
+    outline: none;
+    /*quando clicar em uma caixa ele fica azul*/
 }
 
-body{
+/* VARIAVÉIS */
+:root {
+    --corAzul: #274083;
+}
+
+body {
     font-family: Arial, Helvetica, sans-serif;
     color: #fff;
     display: grid;
     grid-template-columns: 75% 25%;
     grid-template-areas: 'cabecalho formulario'
-                         'principal formulario'
-                         'rodape formulario';
+        'principal formulario'
+        'rodape formulario';
     height: 100vh;
 
 }
+
 /* HEADER */
-header{
+header {
     grid-area: cabecalho;
 
 }
-.logo h1{
+
+.logo h1 {
     color: var(--corAzul);
-    margin-left: 10px;/* espaçamento entre os itens*/
+    margin-left: 10px;
+    /* espaçamento entre os itens*/
 }
-.logo img{
+
+.logo img {
     width: 80px;
 }
-.logo{
+
+.logo {
     display: flex;
     align-items: center;
     padding: 10px 30px;
 }
 
 /* MAIN */
-main{
+main {
     background: linear-gradient(to right, #48a0df, var(--corAzul));
     grid-area: principal;
     display: flex;
@@ -50,87 +57,149 @@ main{
     padding-bottom: 5px;
     line-height: 1cm;
 }
-main figure{
+
+main figure {
     width: 200px;
 }
-main figure img{
+
+main figure img {
     width: 100%;
 }
-main h1{
+
+main h1 {
     font-size: 40px;
     width: 80%;
     margin-bottom: 30px;
 }
-main h3{
+
+main h3 {
     width: 80%;
 }
+
 /* ASIDE */
-aside{
-    background-color:var(--corAzul);
+aside {
+    background-color: var(--corAzul);
     grid-area: formulario;
 }
-aside h1{
+
+aside h1 {
     text-align: center;
     margin-bottom: 20px;
     margin-top: 20px;
 }
-aside form{
+
+aside form {
     width: 90%;
-    margin: 0 auto; /*centralizou*/
+    margin: 0 auto;
+    /*centralizou*/
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
+
 aside input,
 aside select,
-aside button{
+aside button {
     padding: 15px;
     font-size: 16px;
     border: none;
 }
 
-::placeholder{
+::placeholder {
     color: #000;
 }
-aside input:focus,
-aside select:focus{
+
+/* aside input:focus,
+aside select:focus {
+    outline: 2px solid #48a0df; 
+    box-shadow: 0 0 5px #48a0df; 
+} */   
+
+aside :where(input, select):focus{
     outline: 2px solid #48a0df;
-    /* box-shadow: 0 0 5px #48a0df; */
 }
-/* aside:where(input, select):focus{
-    outline: 2px solid #48a0df;
-} */
-aside button{
+aside button {
     background-color: #11dd2c;
     cursor: pointer;
     transition: all o.2s linear;
 }
-aside button:hover{
+
+aside button:hover {
     box-shadow: 0 0 10px #03123f;
     transition: all o.2s linear;
 }
-aside small{
+
+aside small {
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 20px;
     display: block;
     text-align: center;
 }
+
 /* FOOTER */
-footer{
+footer {
     grid-area: rodape;
     display: flex;
-    background-color:#ccc;
+    background-color: #ccc;
     color: var(--corAzul);
     padding: 30px;
 }
-footer section{
+
+footer section {
     margin: 5px 20px;
 }
-footer .rodape-titulo{
+
+footer .rodape-titulo {
     margin-bottom: 20px;
 }
-footer .rodape-conteudo{
+
+footer .rodape-conteudo {
     text-align: justify;
     line-height: 0.7cm;
+}
+
+/* RESPONSIVIDADE */
+
+/* TABLET */
+@media screen and (max-width:1023px){
+    body{
+        grid-template-columns: 100%;
+        grid-template-areas: 'cabecalho'
+                             'principal'
+                             'rodape'
+                             'formulario';
+    }
+
+    main figure{
+        margin-right: 40px;
+    }
+    main{
+        height: 50vh;
+    }
+
+}
+
+/* SMARTPHONE */
+
+@media screen and (max-width:767px) {
+
+    main{
+        background: #48a0df url(../imagens/livro2.png);
+        background-size: 200px; background-repeat: no-repeat;
+        background-position: center;
+        background-blend-mode: multiply;
+    }
+    main figure{
+        display: none;
+    }    
+    main h1,
+    main h3{
+        width: 100%;
+        text-shadow: 2px 1px 2px #000;
+    }
+    footer{
+        flex-direction: column;
+        row-gap: 20px;
+    }
 }
